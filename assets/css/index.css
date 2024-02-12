@@ -100,6 +100,18 @@
     color: var(--electricYellow);
     padding: 5px;
   }
+  #welcomePage {
+    background-color: var(--electricPurple);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .drop-element {
+    position: relative;
+    animation: dropAnimation 3s ease forwards;
+  }
   .bubble{
     background-color: var(--electricPurple);
     color: var(--electricYellow);
@@ -122,10 +134,7 @@
     margin: 50px;
     line-height: 30px;
 }
-.column {
-    float: left;
-    width: 25%;
-  }
+
   #myBtn {
     display: none;
     position: fixed;
@@ -216,7 +225,16 @@
     justify-content: space-between;
     align-items: stretch;
   }
-
+  @keyframes dropAnimation {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(100);
+      opacity: 1;
+    }
+  }
   @media only screen and (min-width: 300px) {
     /* For tablets: */
     .container{
@@ -225,4 +243,11 @@
     .column{
         width: 50%;
     }
+    }
+@media only screen and (min-width: 600px) {
+
+    .column {
+        float: left;
+        width: 25%;
+      }
     }
