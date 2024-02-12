@@ -216,4 +216,13 @@
     justify-content: space-between;
     align-items: stretch;
   }
-  
+
+  @media only screen and (min-width: 300px) {
+    /* For tablets: */
+    .container{
+        display: block;
+    }
+    .column{
+        width: 50%;
+    }
+    }
