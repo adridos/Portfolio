@@ -135,6 +135,7 @@ strong {
 .bubble:hover {
   box-shadow: 5px 5px 5px var(--green);
 }
+.work-box
 #notBubble:hover {
   box-shadow: 5px 5px 5px var(--red);
 }
@@ -147,7 +148,14 @@ strong {
   margin: 30px 100px 30px 100px;
   line-height: 33px;
 }
-
+#welcomePage {
+    background-color: var(--electricPurple);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
 #myBtn {
   display: none;
   position: fixed;
@@ -285,11 +293,7 @@ strong {
   text-align: center;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
-.container {
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-}
+
 
 @keyframes dropAnimation {
   from {
@@ -330,12 +334,16 @@ strong {
   .drop-element {
     font-size: 150px;
   }
-  #welcomePage {
-    background-color: var(--electricPurple);
-    height: 100vh;
-    width: 100%;
+
+  .container {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+  #projContainer{
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin:40px;
+    justify-content:space-around;
   }
 }
