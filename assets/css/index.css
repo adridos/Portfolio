@@ -6,6 +6,8 @@
     --cream: #f7ecdc;
     --electricPurple: #5b44e5;
     --electricYellow: #edf332;
+    --red: #FF0000;
+    --green: #16FF00;
   }
   
   html {
@@ -100,6 +102,21 @@
     color: var(--electricYellow);
     padding: 5px;
   }
+
+  #hatchImg {
+    width: 280px;
+  }
+  
+  #internImg {
+    width: 320px;
+  }
+  
+  #gameImg {
+    width: 300px;
+  }
+  
+
+
   #welcomePage {
     background-color: var(--electricPurple);
     height: 100vh;
@@ -125,14 +142,21 @@
     box-shadow: 5px 5px 5px var(--electricYellow);
     text-align: center;
   }
+  .bubble:hover{
+    box-shadow: 5px 5px 5px var(--green);
+  }
+  #notBubble:hover{
+    box-shadow: 5px 5px 5px var(--red);
+
+  }
   #notBubble{
     background-color: var(--white) !important;
     color: var(--electricPurple) !important;
     border: 1px solid var(--electricPurple);
   }
 #introduction{
-    margin: 50px;
-    line-height: 30px;
+    margin: 30px 100px 30px 100px;
+    line-height: 33px;
 }
 
   #myBtn {
@@ -169,6 +193,10 @@
     margin: 40px;
     background-color: var(--white);
   }
+  .contact-box:hover{
+    box-shadow: 4px 4px 10px var(--electricPurple);
+
+  }
   .icon {
     height: 50px;
     width: auto;
@@ -188,6 +216,11 @@
     background-color: var(--electricYellow);
     padding: 2px 5px;
   }
+  .link:hover {
+    transform: translateY(-5px);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+  }
+  
 .divider {
     border-top: 2px solid var(--electricYellow);
     margin: 20px 0;
@@ -219,12 +252,57 @@
     margin: 20px 0;
     width: 100%;
   }
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
   
+  .work-box {
+    border-radius: 5px;
+    padding: 30px;
+    width: auto;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 30px;
+    background-color: var(--white);
+  }
+  .work-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+  }
+  .overlay {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    display: none;
+  }
+  .overlay-content {
+    border: 1px solid var(--electricPurple);
+    /* existing styles */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  }
   .container {
     display: flex;
     justify-content: space-between;
     align-items: stretch;
   }
+
   @keyframes dropAnimation {
     from {
       transform: translateY(-100%);
@@ -243,6 +321,15 @@
     .column{
         width: 50%;
     }
+#welcome{
+    font-size: 40px;
+}
+.drop-element{
+    font-size: 50px;
+}
+#welcomePage{
+    height:100vh;
+}
     }
 @media only screen and (min-width: 600px) {
 
@@ -250,4 +337,7 @@
         float: left;
         width: 25%;
       }
+
     }
+
+    
