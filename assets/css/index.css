@@ -105,8 +105,47 @@
     margin: 50px;
     line-height: 25px;
 }
-
-
+.contact-box {
+    border-radius: 5px;
+    padding: 20px;
+    width: auto;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+    margin: 40px;
+    background-color: var(--white);
+  }
+  .icon {
+    height: 50px;
+    width: auto;
+  }
+  .contactLink {
+    border: 2px solid var(--electricYellow);
+    background-color: var(--electricYellow);
+    padding: 2px 5px;
+    border-radius: 10px;
+  }
+  .contactLink:hover {
+    transform: translateY(-5px);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+  }
+.link {
+    border: 2px solid var(--electricYellow);
+    background-color: var(--electricYellow);
+    padding: 2px 5px;
+  }
+.divider {
+    border-top: 2px solid var(--electricYellow);
+    margin: 20px 0;
+    width: 100%;
+  }
+  #resumeBtn {
+    display: flex;
+    justify-content: center;
+    margin: 0 500px 0 500px;
+    padding: 10px 5px 10px 5px;
+    border-radius: 10px;
+  }
   .profile-image {
     border-radius: 50%; /* Make the image circular */
     overflow: hidden; /* Hide any overflowing content */
