@@ -262,7 +262,7 @@ strong {
 
 .work-box {
   border-radius: 5px;
-  padding: 30px;
+  padding: 10px;
   width: auto;
   text-align: center;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
@@ -296,6 +296,7 @@ strong {
   padding: 20px;
   text-align: center;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  width:80%;
 }
 
 
@@ -309,10 +310,7 @@ strong {
     opacity: 1;
   }
 }
-.projColumn{
-    float: left;
-    width: 33.33%;
-}
+
 @media only screen and (min-width: 300px) {
   /* For tablets: */
   .container {
@@ -330,21 +328,20 @@ strong {
   #welcomePage {
     height: 100vh;
   }
-  .projColumn{
-    display:inline-block;
-    width: 100%;
-  }
+
   #introduction{
-    margin: 30px 20px 30px 20px;
+    margin: 30px 40px 30px 40px;
   }
-  .work-box{
-    margin: 40px;
-    padding: 10px;
-  }
+ 
   #resumeBtn{
     margin: 0;
   }
+  .projColumn{
+    float: inline-start;
+    width: 100%;
+  }
 }
+/*how I want it to look on desktop*/
 @media only screen and (min-width: 600px) {
   .column {
     float: left;
@@ -367,5 +364,28 @@ strong {
     flex-wrap: wrap;
     margin:40px;
     justify-content:space-around;
+  }
+  .projColumn{
+    float: left;
+    width: 33.33%;
+}
+.work-box {
+    padding: 30px;
+  }
+  .overlay-content{
+  border: 1px solid var(--electricPurple);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  width: auto;
+}
+img {
+    height: 200px;
+    width: auto;
   }
 }
