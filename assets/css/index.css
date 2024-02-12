@@ -100,11 +100,39 @@
     color: var(--electricYellow);
     padding: 5px;
   }
-  
+  .bubble{
+    background-color: var(--electricPurple);
+    color: var(--electricYellow);
+    padding: 20px 60px 20px 60px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: 20px 40px 20px 40px;
+    font-weight: 600;
+    box-shadow: 5px 5px 5px var(--electricYellow);
+    text-align: center;
+  }
+  #notBubble{
+    background-color: var(--white) !important;
+    color: var(--electricPurple) !important;
+    border: 1px solid var(--electricPurple);
+  }
 #introduction{
     margin: 50px;
-    line-height: 25px;
+    line-height: 30px;
 }
+.column {
+    float: left;
+    width: 25%;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 .contact-box {
     border-radius: 5px;
     padding: 20px;
