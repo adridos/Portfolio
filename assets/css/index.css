@@ -95,7 +95,7 @@ a {
 
 img {
   height: 200px;
-  width: auto;
+  width: 100%;
 }
 strong {
   background-color: var(--electricPurple);
@@ -135,7 +135,6 @@ strong {
 .bubble:hover {
   box-shadow: 5px 5px 5px var(--green);
 }
-.work-box
 #notBubble:hover {
   box-shadow: 5px 5px 5px var(--red);
 }
@@ -220,7 +219,7 @@ strong {
 .divider {
   border-top: 2px solid var(--electricYellow);
   margin: 20px 0;
-  width: 100%;
+  width: 80%;
 }
 #resumeBtn {
   display: flex;
@@ -256,6 +255,10 @@ strong {
   font-weight: bold;
   cursor: pointer;
 }
+#skills{
+    margin: 50px 0px 50px 0px;
+}
+
 
 .work-box {
   border-radius: 5px;
@@ -266,6 +269,7 @@ strong {
   transition: all 0.3s ease-in-out;
   margin-bottom: 30px;
   background-color: var(--white);
+  margin: 20px;
 }
 .work-box:hover {
   transform: translateY(-5px);
@@ -305,13 +309,17 @@ strong {
     opacity: 1;
   }
 }
+.projColumn{
+    float: left;
+    width: 33.33%;
+}
 @media only screen and (min-width: 300px) {
   /* For tablets: */
   .container {
     display: block;
   }
   .column {
-    width: 50%;
+    width: 100%;
   }
   #welcome {
     font-size: 40px;
@@ -321,6 +329,20 @@ strong {
   }
   #welcomePage {
     height: 100vh;
+  }
+  .projColumn{
+    display:inline-block;
+    width: 100%;
+  }
+  #introduction{
+    margin: 30px 20px 30px 20px;
+  }
+  .work-box{
+    margin: 40px;
+    padding: 10px;
+  }
+  #resumeBtn{
+    margin: 0;
   }
 }
 @media only screen and (min-width: 600px) {
