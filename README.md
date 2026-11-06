@@ -1,2 +1,9 @@
-# Portfolio
-This portfolio is being done for CIS 1512 - Software Engineering Practices at Oakland Community College. This project is meant to showcase my skills and abilities learned and practiced over the 4 years as a computer science student at Oakland University
+# Adriana Dostine — Portfolio
+
+Personal portfolio site: UX, project coordination and software engineering.
+
+- `index.html` — the whole site (plain HTML/CSS, no build step)
+- `assets/` — photos, project screenshots and the Ford demo video
+
+## Publish with GitHub Pages
+Settings → Pages → Source: **Deploy from a branch** → Branch: `main`, folder `/ (root)`.
