@@ -35,6 +35,15 @@ a{color:#3F4E26}a:hover{color:#2C3819}
 .card:hover,.card:focus-within{transform:translateY(-6px);box-shadow:0 18px 36px -12px rgba(74,51,38,.22),0 4px 10px rgba(74,51,38,.06)}
 @media (prefers-reduced-motion: reduce){.card{transition:box-shadow .2s ease}.card:hover,.card:focus-within{transform:none}}
 </style>
+<style>
+.hero-title{background:radial-gradient(circle at var(--mx,25%) var(--my,60%),#7C8C4E 0%,#4F5F2F 32%,#4A3326 72%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.hero-title em{color:inherit}
+.js .reveal{opacity:0;translate:0 18px;transition:opacity .7s ease,translate .7s ease}
+.js .reveal.is-visible{opacity:1;translate:0 0}
+.js .card.reveal{transition:opacity .7s ease,translate .7s ease,transform .25s ease,box-shadow .25s ease}
+@media (prefers-reduced-motion: reduce){.js .reveal{opacity:1;translate:none;transition:none}}
+</style>
+<script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
 <div style="background: #F5EFE3; color: #4A3326; font-family: 'DM Sans', system-ui, sans-serif; min-height: 100vh">
@@ -52,7 +61,7 @@ a{color:#3F4E26}a:hover{color:#2C3819}
 <section id="top" style="max-width: 1160px; margin: 0 auto; padding: 72px 24px 96px; display: flex; flex-wrap: wrap; gap: 56px; align-items: center">
 <div style="flex: 999 1 520px; min-width: 0">
 <p style="margin: 0 0 20px; font-size: 14px; letter-spacing: 0.14em; text-transform: uppercase; color: #4F5F2F; font-weight: 600">UX · Project Coordination · Software</p>
-<h1 style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-weight: 400; font-size: clamp(44px, 6vw, 76px); line-height: 1.04; letter-spacing: -0.02em">Technology that works <em style="color: #4F5F2F">the way people do.</em></h1>
+<h1 class="hero-title" style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-weight: 400; font-size: clamp(44px, 6vw, 76px); line-height: 1.04; letter-spacing: -0.02em">Technology that works <em>the way people do.</em></h1>
 <p style="margin: 28px 0 0; max-width: 560px; font-size: 19px; line-height: 1.6; color: #55524A">With degrees in psychology and computer science, I live where people and technology meet. I listen to what a team is trying to do, then build the tools, processes and experiences that help them work smarter, not harder.</p>
 <div style="margin-top: 36px; display: flex; flex-wrap: wrap; gap: 14px">
 <a class="pill btn-moss" href="#work" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 26px; border-radius: 999px; background: #4F5F2F; color: #FBF8F1; text-decoration: none; font-weight: 500">See my work</a>
@@ -74,12 +83,12 @@ a{color:#3F4E26}a:hover{color:#2C3819}
 
 <section id="work" style="max-width: 1160px; margin: 0 auto; padding: 112px 24px 48px">
 <div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-end; justify-content: space-between; margin-bottom: 48px">
-<h2 style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-weight: 400; font-size: clamp(36px, 4vw, 52px); letter-spacing: -0.01em">Recent projects</h2>
+<h2 class="reveal" style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-weight: 400; font-size: clamp(36px, 4vw, 52px); letter-spacing: -0.01em">Recent projects</h2>
 </div>
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 460px), 1fr)); gap: 32px">
 
-<article class="card" style="background: #FBF8F1; border-radius: 24px; overflow: hidden">
+<article class="card reveal" style="background: #FBF8F1; border-radius: 24px; overflow: hidden">
 <img src="assets/builder-insights.png" alt="SE Michigan Builder Intelligence Report showing builder cards with price ranges and communities" style="width: 100%; height: 260px; object-fit: cover; object-position: top left; display: block; background: #E9E3D3">
 <div style="padding: 32px">
 <p style="margin: 0 0 10px; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #4F5F2F; font-weight: 600">Data · Interactive report</p>
@@ -89,7 +98,7 @@ a{color:#3F4E26}a:hover{color:#2C3819}
 </div>
 </article>
 
-<article class="card" style="background: #FBF8F1; border-radius: 24px; overflow: hidden">
+<article class="card reveal" style="background: #FBF8F1; border-radius: 24px; overflow: hidden">
 <img src="assets/estate-attorney.png" alt="Estate attorney partner landing page hero: A trusted real estate partner for your most sensitive client matters" style="width: 100%; height: 260px; object-fit: cover; object-position: center top; display: block; background: #E9E3D3">
 <div style="padding: 32px">
 <p style="margin: 0 0 10px; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #4F5F2F; font-weight: 600">Web design · Partner outreach</p>
@@ -99,7 +108,7 @@ a{color:#3F4E26}a:hover{color:#2C3819}
 </div>
 </article>
 
-<article class="card" style="background: #FBF8F1; border-radius: 24px; overflow: hidden">
+<article class="card reveal" style="background: #FBF8F1; border-radius: 24px; overflow: hidden">
 <img src="assets/trello-pipeline.png" alt="Trello buyer pipeline board with columns from Under Contract through Closing, client names blurred" style="width: 100%; height: 260px; object-fit: cover; object-position: left top; display: block; background: #E9E3D3">
 <div style="padding: 32px">
 <p style="margin: 0 0 10px; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #4F5F2F; font-weight: 600">Process design · Operations</p>
@@ -108,7 +117,7 @@ a{color:#3F4E26}a:hover{color:#2C3819}
 </div>
 </article>
 
-<article class="card" style="background: #FBF8F1; border-radius: 24px; overflow: hidden">
+<article class="card reveal" style="background: #FBF8F1; border-radius: 24px; overflow: hidden">
 <img src="assets/internship-packet.png" alt="Cover of the Stewart Team Summer 2025 Internship Packet" style="width: 100%; height: 260px; object-fit: cover; object-position: center 38%; display: block; background: #F9F5EE">
 <div style="padding: 32px">
 <p style="margin: 0 0 10px; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #4F5F2F; font-weight: 600">Program design · Mentorship</p>
@@ -117,7 +126,7 @@ a{color:#3F4E26}a:hover{color:#2C3819}
 </div>
 </article>
 
-<article class="card" style="background: #FBF8F1; border-radius: 24px; overflow: hidden">
+<article class="card reveal" style="background: #FBF8F1; border-radius: 24px; overflow: hidden">
 <img src="assets/morning-crumbs.png" alt="Morning Crumbs website About page with a family photo and the bakery story" style="width: 100%; height: 260px; object-fit: cover; object-position: center 30%; display: block; background: #F7F3EC">
 <div style="padding: 32px">
 <p style="margin: 0 0 10px; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #4F5F2F; font-weight: 600">Brand from scratch</p>
@@ -132,12 +141,12 @@ a{color:#3F4E26}a:hover{color:#2C3819}
 
 <section id="internships" style="max-width: 1160px; margin: 0 auto; padding: 96px 24px 48px">
 <div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-end; justify-content: space-between; margin-bottom: 48px">
-<h2 style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-weight: 400; font-size: clamp(36px, 4vw, 52px); letter-spacing: -0.01em; color: #4A3326">Internship work</h2>
+<h2 class="reveal" style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-weight: 400; font-size: clamp(36px, 4vw, 52px); letter-spacing: -0.01em; color: #4A3326">Internship work</h2>
 <p style="margin: 0; max-width: 380px; color: #55524A; line-height: 1.6">Front-end development and team projects from my time at Ford and AAA's Hatch Garage innovation team.</p>
 </div>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 460px), 1fr)); gap: 32px">
-<article class="card" style="background: #FBF8F1; border-radius: 24px; overflow: hidden; display: flex; flex-direction: column">
-<video src="assets/ford-demo.mp4" poster="assets/ford-digital-account.png" controls muted playsinline preload="metadata" aria-label="Demo recording of the Ford Digital Account site" style="width: 100%; height: 220px; object-fit: cover; display: block; background: #E9E3D3"></video>
+<article class="card reveal" style="background: #FBF8F1; border-radius: 24px; overflow: hidden; display: flex; flex-direction: column">
+<video src="assets/ford-demo.mp4" poster="assets/ford-digital-account.png" class="card-video" muted loop playsinline preload="metadata" aria-label="Demo recording of the Ford Digital Account site" style="width: 100%; height: 220px; object-fit: cover; display: block; background: #E9E3D3"></video>
 <div style="padding: 28px 32px 32px; display: flex; flex-direction: column; gap: 12px; flex-grow: 1">
 <p style="margin: 0; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #4F5F2F; font-weight: 600">Ford Motor Company · Summer 2022</p>
 <h3 style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-weight: 400; font-size: 26px; color: #4A3326">Digital Account Team Site</h3>
@@ -145,7 +154,7 @@ a{color:#3F4E26}a:hover{color:#2C3819}
 <p style="margin: 0; font-size: 13px; color: #6A6658">HTML · CSS · JavaScript · Figma handoff</p>
 </div>
 </article>
-<article class="card" style="background: #FBF8F1; border-radius: 24px; overflow: hidden; display: flex; flex-direction: column">
+<article class="card reveal" style="background: #FBF8F1; border-radius: 24px; overflow: hidden; display: flex; flex-direction: column">
 <img src="assets/hatch-timeline.png" alt="Hatch Garage interactive history timeline" style="width: 100%; height: 220px; object-fit: cover; object-position: top; display: block; background: #E9E3D3">
 <div style="padding: 28px 32px 32px; display: flex; flex-direction: column; gap: 12px; flex-grow: 1">
 <p style="margin: 0; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #4F5F2F; font-weight: 600">AAA Hatch Garage · Fall 2022</p>
@@ -154,7 +163,7 @@ a{color:#3F4E26}a:hover{color:#2C3819}
 <p style="margin: 0; font-size: 13px; color: #6A6658">HTML · CSS · JavaScript</p>
 </div>
 </article>
-<article class="card" style="background: #FBF8F1; border-radius: 24px; overflow: hidden; display: flex; flex-direction: column">
+<article class="card reveal" style="background: #FBF8F1; border-radius: 24px; overflow: hidden; display: flex; flex-direction: column">
 <img src="assets/intern-garage.png" alt="Intern Garage site FAQ page" style="width: 100%; height: 220px; object-fit: cover; object-position: top; display: block; background: #E9E3D3">
 <div style="padding: 28px 32px 32px; display: flex; flex-direction: column; gap: 12px; flex-grow: 1">
 <p style="margin: 0; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #4F5F2F; font-weight: 600">AAA · Fall 2022</p>
@@ -163,7 +172,7 @@ a{color:#3F4E26}a:hover{color:#2C3819}
 <p style="margin: 0; font-size: 13px; color: #6A6658">HTML · CSS · JavaScript</p>
 </div>
 </article>
-<article class="card" style="background: #FBF8F1; border-radius: 24px; overflow: hidden; display: flex; flex-direction: column">
+<article class="card reveal" style="background: #FBF8F1; border-radius: 24px; overflow: hidden; display: flex; flex-direction: column">
 <img src="assets/risky-business.png" alt="Risky Business game title screen" style="width: 100%; height: 220px; object-fit: cover; object-position: center; display: block; background: #E9E3D3">
 <div style="padding: 28px 32px 32px; display: flex; flex-direction: column; gap: 12px; flex-grow: 1">
 <p style="margin: 0; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #4F5F2F; font-weight: 600">AAA · Winter 2023</p>
@@ -176,9 +185,9 @@ a{color:#3F4E26}a:hover{color:#2C3819}
 </section>
 
 <section aria-labelledby="school" style="max-width: 1160px; margin: 0 auto; padding: 48px 24px 32px">
-<h2 id="school" style="margin: 0 0 32px; font-family: 'Fraunces', Georgia, serif; font-weight: 400; font-size: 32px; color: #4A3326">School projects</h2>
+<h2 class="reveal" id="school" style="margin: 0 0 32px; font-family: 'Fraunces', Georgia, serif; font-weight: 400; font-size: 32px; color: #4A3326">School projects</h2>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 32px">
-<article class="card" style="background: #FBF8F1; border-radius: 24px; overflow: hidden">
+<article class="card reveal" style="background: #FBF8F1; border-radius: 24px; overflow: hidden">
 <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px; background: #E9E3D3">
 <img src="assets/grizzblocks-menu.png" alt="GrizzBlocks title menu" style="width: 100%; height: 180px; object-fit: cover; object-position: center; display: block; background: #E9E3D3">
 <img src="assets/grizzblocks-play.png" alt="GrizzBlocks gameplay screen" style="width: 100%; height: 180px; object-fit: cover; object-position: center; display: block; background: #E9E3D3">
@@ -189,7 +198,7 @@ a{color:#3F4E26}a:hover{color:#2C3819}
 <p style="margin: 0; color: #55524A; line-height: 1.55; font-size: 15px">Led the team that built an Oakland University take on Tetris, shipped in about three months.</p>
 </div>
 </article>
-<article class="card" style="background: #FBF8F1; border-radius: 24px; overflow: hidden">
+<article class="card reveal" style="background: #FBF8F1; border-radius: 24px; overflow: hidden">
 <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px; background: #E9E3D3">
 <img src="assets/bakery-login.png" alt="The Bakery login page" style="width: 100%; height: 180px; object-fit: cover; object-position: center; display: block; background: #E9E3D3">
 <img src="assets/bakery-menu.png" alt="The Bakery ordering menu" style="width: 100%; height: 180px; object-fit: cover; object-position: center; display: block; background: #E9E3D3">
@@ -204,7 +213,7 @@ a{color:#3F4E26}a:hover{color:#2C3819}
 </section>
 
 <section id="about" style="max-width: 1160px; margin: 0 auto; padding: 48px 24px 96px">
-<div style="background: #E9E3D3; border-radius: 32px; padding: clamp(32px, 6vw, 72px); display: flex; flex-wrap: wrap; gap: 40px; align-items: center">
+<div class="reveal" style="background: #E9E3D3; border-radius: 32px; padding: clamp(32px, 6vw, 72px); display: flex; flex-wrap: wrap; gap: 40px; align-items: center">
 <p style="flex: 999 1 480px; min-width: 0; margin: 0; font-family: 'Fraunces', Georgia, serif; font-size: clamp(26px, 3vw, 36px); line-height: 1.3">“If we did all the things we are capable of, we would literally astound ourselves.”<span style="display: block; margin-top: 16px; font-family: 'DM Sans', system-ui, sans-serif; font-size: 16px; color: #6A6658">— Thomas Edison</span></p>
 <div style="flex: 1 1 240px; min-width: 0; color: #55524A; line-height: 1.6">
 <p style="margin: 0 0 14px">People call me a do-er. By the time someone finishes describing an idea, I’m already figuring out how we make it happen — in a way that fits how they already work, not against the grain.</p>
@@ -215,7 +224,7 @@ a{color:#3F4E26}a:hover{color:#2C3819}
 
 <footer id="contact" style="background: #2F3820; color: #F5EFE3">
 <div style="max-width: 1160px; margin: 0 auto; padding: 72px 24px 40px">
-<h2 style="margin: 0 0 32px; font-family: 'Fraunces', Georgia, serif; font-weight: 400; font-size: clamp(32px, 4vw, 44px); line-height: 1.1">Contact</h2>
+<h2 class="reveal" style="margin: 0 0 32px; font-family: 'Fraunces', Georgia, serif; font-weight: 400; font-size: clamp(32px, 4vw, 44px); line-height: 1.1">Contact</h2>
 <div style="display: flex; flex-wrap: wrap; gap: 14px">
 <a class="pill btn-cream" href="mailto:adriana.dostine@hotmail.com" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 26px; border-radius: 999px; background: #F5EFE3; color: #2F3820; text-decoration: none; font-weight: 600">adriana.dostine@hotmail.com</a>
 <a class="pill btn-cream-outline" href="https://linkedin.com/in/adriana-dostine" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 26px; border-radius: 999px; border: 1.5px solid #F5EFE3; color: #F5EFE3; text-decoration: none; font-weight: 500">LinkedIn</a>
@@ -227,5 +236,36 @@ a{color:#3F4E26}a:hover{color:#2C3819}
 </footer>
 
 </div>
+<script>
+(function(){
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // Headline gradient follows the mouse
+  var t=document.querySelector('.hero-title');
+  if(t&&!reduce&&window.matchMedia('(hover: hover)').matches){
+    var x=25,y=60,tx=25,ty=60,raf=null;
+    function tick(){x+=(tx-x)*0.08;y+=(ty-y)*0.08;t.style.setProperty('--mx',x+'%');t.style.setProperty('--my',y+'%');
+      raf=(Math.abs(tx-x)>0.1||Math.abs(ty-y)>0.1)?requestAnimationFrame(tick):null;}
+    window.addEventListener('mousemove',function(e){var r=t.getBoundingClientRect();
+      tx=Math.max(-20,Math.min(120,(e.clientX-r.left)/r.width*100));ty=Math.max(-40,Math.min(140,(e.clientY-r.top)/r.height*100));
+      if(!raf)raf=requestAnimationFrame(tick);},{passive:true});
+  }
+  // Fade sections and cards in as they scroll into view
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){entries.forEach(function(en){if(en.isIntersecting){
+      var sib=[].slice.call(en.target.parentNode.children).filter(function(c){return c.classList.contains('reveal')});
+      var el=en.target;io.unobserve(el);
+      setTimeout(function(){el.classList.add('is-visible')},Math.min(sib.indexOf(el),3)*90);}})},{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(el){io.observe(el)});
+  } else els.forEach(function(el){el.classList.add('is-visible')});
+  // Project videos play while on screen
+  var vids=document.querySelectorAll('.card-video');
+  if('IntersectionObserver' in window){
+    var vo=new IntersectionObserver(function(entries){entries.forEach(function(en){
+      if(en.isIntersecting&&!reduce){var p=en.target.play();if(p&&p.catch)p.catch(function(){});}else en.target.pause();})},{threshold:0.4});
+    vids.forEach(function(v){vo.observe(v)});
+  }
+})();
+</script>
 </body>
 </html>
