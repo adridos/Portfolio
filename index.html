@@ -44,6 +44,16 @@ a{color:#3F4E26}a:hover{color:#2C3819}
 @media (prefers-reduced-motion: reduce){.js .reveal{opacity:1;translate:none;transition:none}}
 </style>
 <script>document.documentElement.classList.add('js')</script>
+<style>
+.pill{position:relative;overflow:hidden;isolation:isolate}
+.pill::before{content:"";position:absolute;inset:-1px;z-index:-1;pointer-events:none;opacity:0;transition:opacity .35s ease;background:radial-gradient(circle 90px at var(--bx,50%) var(--by,50%),var(--glow) 0%,transparent 100%)}
+.pill:hover::before,.pill:focus-visible::before{opacity:1}
+.btn-moss{--glow:rgba(124,140,78,.28)}
+.btn-brown-outline{--glow:rgba(124,140,78,.75)}
+.btn-cream{--glow:rgba(245,239,227,.22)}
+.btn-cream-outline{--glow:rgba(190,200,150,.95)}
+@media (prefers-reduced-motion: reduce){.pill::before{transition:none}}
+</style>
 </head>
 <body>
 <div style="background: #F5EFE3; color: #4A3326; font-family: 'DM Sans', system-ui, sans-serif; min-height: 100vh">
@@ -249,6 +259,10 @@ a{color:#3F4E26}a:hover{color:#2C3819}
       tx=Math.max(-20,Math.min(120,(e.clientX-r.left)/r.width*100));ty=Math.max(-40,Math.min(140,(e.clientY-r.top)/r.height*100));
       if(!raf)raf=requestAnimationFrame(tick);},{passive:true});
   }
+  // Buttons: soft color glow follows the cursor
+  if(!reduce){document.querySelectorAll('.pill').forEach(function(b){
+    b.addEventListener('pointermove',function(e){var r=b.getBoundingClientRect();
+      b.style.setProperty('--bx',(e.clientX-r.left)+'px');b.style.setProperty('--by',(e.clientY-r.top)+'px');});});}
   // Fade sections and cards in as they scroll into view
   var els=document.querySelectorAll('.reveal');
   if('IntersectionObserver' in window){
