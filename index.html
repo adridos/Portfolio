@@ -52,6 +52,21 @@ a{color:#3F4E26}a:hover{color:#2C3819}
 .btn-cream-outline{--glow:rgba(245,239,227,.16)}
 @media (prefers-reduced-motion: reduce){.pill::before{transition:none}.pill:hover,.pill:focus-visible{transform:none;animation:none}}
 </style>
+<style>
+.board{list-style:none;margin:0;padding:6px 0 0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,170px),1fr))}
+@media (max-width:560px){.board{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 14px}.note{padding:22px 14px 14px;min-height:120px}.note-text,.note-big{font-size:16px}.note-label{font-size:10px}}
+.board{;gap:22px 20px}
+.note{position:relative;padding:26px 20px 20px;min-height:150px;display:flex;flex-direction:column;gap:10px;color:#4A3326;box-shadow:0 8px 16px -8px rgba(74,51,38,.28),0 1px 2px rgba(74,51,38,.08);transform:rotate(var(--tilt,0deg));transition:transform .25s ease,box-shadow .25s ease}
+.note::before{content:"";position:absolute;top:-9px;left:50%;width:56px;height:18px;margin-left:-28px;background:rgba(251,248,241,.7);box-shadow:0 1px 2px rgba(74,51,38,.12);transform:rotate(-3deg)}
+.note:nth-child(6n+1){--tilt:-2deg}.note:nth-child(6n+2){--tilt:1.5deg}.note:nth-child(6n+3){--tilt:-1deg}.note:nth-child(6n+4){--tilt:2deg}.note:nth-child(6n+5){--tilt:-1.5deg}.note:nth-child(6n+6){--tilt:1deg}
+.note:hover{transform:rotate(0deg) translateY(-5px) scale(1.03);box-shadow:0 18px 30px -12px rgba(74,51,38,.32),0 2px 4px rgba(74,51,38,.08);z-index:1}
+.js .note.reveal{transition:opacity .7s ease,translate .7s ease,transform .25s ease,box-shadow .25s ease}
+.note-label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:#5C5A4C}
+.note-text{font-family:'Fraunces',Georgia,serif;font-size:19px;line-height:1.3}
+.note-big{font-size:20px}
+.note-attr{font-size:13px;color:#5C5A4C;margin-top:auto}
+@media (prefers-reduced-motion: reduce){.note:hover{transform:rotate(var(--tilt,0deg))}}
+</style>
 </head>
 <body>
 <div style="background: #F5EFE3; color: #4A3326; font-family: 'DM Sans', system-ui, sans-serif; min-height: 100vh">
@@ -222,7 +237,16 @@ a{color:#3F4E26}a:hover{color:#2C3819}
 
 <section id="about" style="max-width: 1160px; margin: 0 auto; padding: 48px 24px 96px">
 <div class="reveal" style="background: #E9E3D3; border-radius: 32px; padding: clamp(32px, 6vw, 72px); display: flex; flex-wrap: wrap; gap: 40px; align-items: center">
-<p style="flex: 999 1 480px; min-width: 0; margin: 0; font-family: 'Fraunces', Georgia, serif; font-size: clamp(26px, 3vw, 36px); line-height: 1.3">“If we did all the things we are capable of, we would literally astound ourselves.”<span style="display: block; margin-top: 16px; font-family: 'DM Sans', system-ui, sans-serif; font-size: 16px; color: #6A6658">— Thomas Edison</span></p>
+<div style="flex: 999 1 520px; min-width: 0">
+<p style="margin: 0 0 18px; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #4F5F2F; font-weight: 600">On my board</p>
+<ul class="board">
+<li class="note reveal" style="background: #F2E6B8"><span class="note-label">A quote I love</span><span class="note-text note-big">“If we did all the things we are capable of, we would literally astound ourselves.”</span><span class="note-attr">— Thomas Edison</span></li>
+<li class="note reveal" style="background: #DCE0C8"><span class="note-label">How I work</span><span class="note-text">Processes should work with people, not against the grain.</span></li>
+<li class="note reveal" style="background: #FBF8F1"><span class="note-label">Thinking about</span><span class="note-text">How AI can take the busywork off people’s plates.</span></li>
+<li class="note reveal" style="background: #F1D9CF"><span class="note-label">Always</span><span class="note-text">Work smarter, not harder.</span></li>
+<li class="note reveal" style="background: #CED5B4"><span class="note-label">From the bakery</span><span class="note-text">Some things can’t be rushed. Good bread needs a long rise.</span></li>
+</ul>
+</div>
 <div style="flex: 1 1 240px; min-width: 0; color: #55524A; line-height: 1.6">
 <p style="margin: 0 0 14px">People call me a do-er. By the time someone finishes describing an idea, I’m already figuring out how we make it happen — in a way that fits how they already work, not against the grain.</p>
 <p style="margin: 0">Waterford, Michigan. Open to remote and hybrid roles in UX, project coordination and software engineering.</p>
